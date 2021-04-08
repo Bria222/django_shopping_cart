@@ -1,0 +1,28 @@
+{% extends 'application_app/main.html' %}
+
+{% block head %}
+
+
+{% for Details in dataa %}
+
+
+<div class="card d-inline-block " style="width: 18rem;">
+   
+    <img src="{{Details.image.url}}" class="card-img-top ">
+    <div class="card-body">
+      <h5 class="card-title">{{Details.name}}</h5>
+      <p class="card-text text-danger">price {{Details.price}}</p>
+      <p class="card-text text-muted"> info {{Details.more}}</p>
+      <a href="#" class="btn btn-warning"> <i class="fas fa-shopping-cart"> add to cart</i></a>
+      <a href="#" class="btn btn-secondary">view more</a>
+    </div>
+   </div>
+    
+</div>
+
+  {% endfor %}
+  
+  
+
+
+{% endblock head %}
